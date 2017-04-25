@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>nomor tiket : {{selectedItem.id_tiket}}</p>
+  <p>nama label : {{selectedItem.nama_label}}</p>
+  <!--<p>lokasi : {{selectedItem.lokasi}}</p>-->
+  <p>status : {{selectedItem.status}}</p>
+  <p>waktu order : {{selectedItem.tanggal_lapor}}</p>
+  <!--<p>koordinat : {{selectedItem.lat}}, {{selectedItem.lon}}</p>-->
+  <!--<p><button ion-button><ion-icon name="pin" (click)="map(selectedItem.lat,selectedItem.lon)"> lokasi </ion-icon></button></p>-->
+  <!--<p><button><ion-icon name="paper" (click)="selesai(selectedItem)"> selesai </ion-icon></button></p>-->
+  <p><button ion-button (click)="selesai(selectedItem)"><ion-icon md="md-paper"> LAPORAN PENYELESAIAN</ion-icon></button></p>
+</ion-content>

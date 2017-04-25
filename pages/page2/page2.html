@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List Order {{user}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor ="let post of posts" (click)="itemTapped($event,post)">
+     <h2> {{post.nama_label}} </h2><i> {{post.status}}</i>
+    </button>
+  </ion-list>
+</ion-content>

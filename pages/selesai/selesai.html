@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Report</ion-title><p>{{selectedItem.nama_label}}</p>
+    <ion-buttons end>
+            <button (click)="takePicture()">
+                <ion-icon name="camera"></ion-icon>
+            </button>
+        </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <img src="{{ base64Image }}" />
+<!--<form (ngSubmit)="kirim()">-->
+  <ion-input [(ngModel)]="data.id_tiket" name="id_tiket" disabled></ion-input>
+  <ion-item>
+    <ion-label>Keterangan</ion-label>
+    <ion-textarea rows="5" [(ngModel)]="data.keterangan" name="keterangan" placeholder="masukkan keterangan penyelesaian..."></ion-textarea>
+  </ion-item>
+  <!--<button ion-button full>kirim</button>-->
+ <!--</form>-->
+<!--<button ion-button full (click)="kirim()">SIMPAN</button>-->
+ <button ion-button (click)="kirim()"><ion-icon md="md-create"> SIMPAN</ion-icon></button>
+</ion-content>
